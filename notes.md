@@ -2,3 +2,6 @@
 ## Github notes
 Git lens does make it easy but the terminal isn't too complicated.
 You need to save before you commit, make sure to pull before in case things have been changed.
+
+## Web Server Notes
+ssh command: ssh -i /Users/oliviawilson/Downloads/ahsoka.pem ubuntu@3.82.146.206
