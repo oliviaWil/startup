@@ -5,3 +5,6 @@ You need to save before you commit, make sure to pull before in case things have
 
 ## Web Server Notes
 ssh command: ssh -i /Users/oliviawilson/Downloads/ahsoka.pem ubuntu@107.21.37.243
+
+## HTML Notes
+icon hexcode is #8374D1
