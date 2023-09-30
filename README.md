@@ -28,3 +28,13 @@ I am going to use the required technologies in the following ways.
 - **Login** - Register and login users. Credentials securely stored in database. Can't look at past solutions unless authenticated.
 - **WebSocket** - As each user solves solution it will appear on solutions page.
 - **React** - Application ported to use the React web framework.
+
+### HTML Deliverable
+- **HTML pages**-index,login, solutions, and how to play
+- **Links**- each page has a navigation section with links to the others
+- **Text**- How to play has a text explaining how to play
+- **Images** - an image that will eventually be the pentagon puzzle both on the main page and on the solutions page
+- **Login**- login form with submit button
+- **Database**- solutions page represents data pulled from the database
+- **Websocket**- solutions page represents realtime data
+
