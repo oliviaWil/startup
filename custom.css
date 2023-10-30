@@ -9,3 +9,16 @@
     margin: 4px 2px;
     cursor: pointer;
  }
+
+    .navbar {
+        margin: 20px; /* Add margin to create space around the navbar */
+}
+
+body {
+    min-height: 100vh; /* Set the minimum height of the body to fill the viewport height */
+    display: flex; /* Use flex layout */
+    flex-direction: column; /* Arrange children in a column */
+}
+main {
+    flex: 1; /* Allow the main content to grow and fill the available space */
+}
