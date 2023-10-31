@@ -24,7 +24,7 @@
     </header>
 
         <main>
-            <table class="table">
+            <table class="table" id="myTable">
                 <tr>
                 <th scope="col"> Date </th>
                 <th scope="col"> Solution </th>
@@ -42,10 +42,50 @@
                 </tr>
 
             </table>
+            <script>
+              let table = document.getElementById("myTable");
+                let row = table.insertRow(-1); // We are adding at the end
+   
+      
+                let c1 = row.insertCell(0);
+                let c2 = row.insertCell(1);
+                let c3 = row.insertCell(2);
+
+      
+                c1.innerText = getDate();
+                c2.innerText = "solution-placeholder";
+                c3.innerText = "puzzle-placeholder";
+            </script>
+            <!-- <script>
+              const urlParams = new URLSearchParams(window.location.search);
+              if (urlParams.has("content")) {
+                console.log("made it here")
+                const content = decodeURIComponent(urlParams.get("content"));
+                
+                function addSolution(wordArray){
+    
+                let table = document.getElementById("myTable");
+                let row = table.insertRow(-1); // We are adding at the end
+   
+      
+                let c1 = row.insertCell(0);
+                let c2 = row.insertCell(1);
+                let c3 = row.insertCell(2);
+
+      
+                c1.innerText = getDate();
+                c2.innerText = wordArray;
+                c3.innerText = "puzzle-placeholder";
+
+                addSolution(content);
+   }
+              }
+            </script> -->
         </main> 
 
         <footer class="nav justify-content-center border-top pb-3 mb-3"">
           <a href="https://github.com/oliviaWil/startup" class="nav-link px-2 text-muted">GitHub</a>
         </footer>
+        <script src="startup.js"></script>
         </body>
         </html>  

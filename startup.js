@@ -13,6 +13,7 @@ function login() {
     const wordArray = wordsEl.value.split("-");
     // console.log(wordArray)
     isValid(wordArray)
+    alert("you entered " + wordArray.join(","))
   }
 
   function isValid(wordArray){
@@ -25,10 +26,13 @@ function login() {
         console.log("Words must be at least 3 letters long")
         return false;
     }
-    invalidWords = checkValidWords(wordArray)
-    if(invalidWords.length != 0){
-      console.log(invalidWords + " are not valid words")
-    }
+    window.location.href = `solutions.html?content=${encodeURIComponent(wordArray)}`;
+    // addSolution(wordArray)
+    console.log("made it to line 29")
+    // invalidWords = checkValidWords(wordArray)
+    // if(invalidWords.length != 0){
+    //   console.log(invalidWords + " are not valid words")
+    // }
 
     console.log("passed")
   }
@@ -36,7 +40,7 @@ function login() {
   function checkRule2(wordArray){
     wordArray.forEach(function(element) {
         console.log(element.length < 3)
-        if (element.length < 3 | element){
+        if (element.length < 3){
             return false;
             console.log("false")
         }
@@ -64,14 +68,35 @@ function login() {
 
     return true; // All words meet the rule
   }
+  function addSolution(wordArray){
+    console.log("made it to line 70")
+      let table = document.getElementById("myTable");
+      let row = table.insertRow(-1); // We are adding at the end
+   
+      // Create table cells
+      let c1 = row.insertCell(0);
+      let c2 = row.insertCell(1);
+      let c3 = row.insertCell(2);
 
-  function checkValidWords(wordArray){
-    var mydata = JSON.parse(dictionary.json);
-      // const response = await fetch('dictionary.json');
-      // const dictionary = await response.json();
-      const missingWords = wordArray.filter(word => !mydata.includes(word));
-      return missingWords;
-    // } catch (error) {
-    //   console.error('An error occurred while fetching the JSON file:', error);
-    // }
-  }
+      // Add data to c1 and c2
+      c1.innerText = getDate()
+      c2.innerText = wordArray
+      c3.innerText = "puzzle-placeholder"
+   }
+   function getDate(){
+      const currentDate = new Date();
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Add 1 to adjust to 1-based month, and pad with 0 if needed.
+      const day = String(currentDate.getDate()).padStart(2, '0');
+      const year = currentDate.getFullYear();
+      return`${month}-${day}-${year}`;
+   }
+  // function checkValidWords(wordArray){
+  //   var mydata = JSON.parse(dictionary.json);
+  //     // const response = await fetch('dictionary.json');
+  //     // const dictionary = await response.json();
+  //     const missingWords = wordArray.filter(word => !mydata.includes(word));
+  //     return missingWords;
+  //   // } catch (error) {
+  //   //   console.error('An error occurred while fetching the JSON file:', error);
+  //   // }
+  // }
