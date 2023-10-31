@@ -103,9 +103,7 @@ What is the opening HTML tag for a paragraph, ordered list, unordered list, seco
 Paragraph: <p>
 Ordered List: <ol>
 Unordered List: <ul>
-Second Level Heading (e.g., <h2>)
-First Level Heading (e.g., <h1>)
-Third Level Heading (e.g., <h3>)
+
 How do you declare the document type to be HTML?
 
 You declare the document type as HTML by adding the following line at the beginning of your HTML document:
