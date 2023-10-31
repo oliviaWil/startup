@@ -42,5 +42,11 @@ I am going to use the required technologies in the following ways.
 - **Header, footer, and main content body**- added css headers and footers to all pages as well as styled the content,images, and elements of each page
 - **Navigation elements**- added css to the navigation links
 - **Responsive Window resizing**- all web pages are responsive to resizing
-- 
+
+### JS Deliverable
+-JavaScript support for future login
+-JavaScript support for your application's interaction logic
+-JavaScript support for future database data
+-JavaScript support for future login
+
 
