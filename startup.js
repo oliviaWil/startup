@@ -1,3 +1,4 @@
+
 function login() {
     const nameEl = document.querySelector("#name");
     localStorage.setItem("userName", nameEl.value);
@@ -16,7 +17,7 @@ function login() {
 
   function isValid(wordArray){
     if(checkRule4(wordArray) === false){
-        console.log("The last letter of a word becomes the first letter of the next word ")
+        console.log("The last letter of a word should be the first letter of the next word ")
         return false;
     }
     
@@ -24,13 +25,18 @@ function login() {
         console.log("Words must be at least 3 letters long")
         return false;
     }
+    invalidWords = checkValidWords(wordArray)
+    if(invalidWords.length != 0){
+      console.log(invalidWords + " are not valid words")
+    }
+
     console.log("passed")
   }
 
   function checkRule2(wordArray){
     wordArray.forEach(function(element) {
         console.log(element.length < 3)
-        if (element.length < 3){
+        if (element.length < 3 | element){
             return false;
             console.log("false")
         }
@@ -57,4 +63,15 @@ function login() {
     }
 
     return true; // All words meet the rule
+  }
+
+  function checkValidWords(wordArray){
+    var mydata = JSON.parse(dictionary.json);
+      // const response = await fetch('dictionary.json');
+      // const dictionary = await response.json();
+      const missingWords = wordArray.filter(word => !mydata.includes(word));
+      return missingWords;
+    // } catch (error) {
+    //   console.error('An error occurred while fetching the JSON file:', error);
+    // }
   }
