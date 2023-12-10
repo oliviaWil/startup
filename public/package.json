@@ -1,0 +1,12 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "This is a fun puzzle based on the NYT's Letter Boxed daily puzzle. Users will try and create words by connecting letters on different sides of the pentagon. Every letter must be used at least once. Each word must start with the first letter of the previous word. Users will be able to keep track of their scores and previous answers.",
+  "main": "startup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
