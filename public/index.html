@@ -35,11 +35,23 @@
                     </form>
                 </div>
                 <div class="col-md-9">
-                    <svg height="220" width="400">
+                    <svg id= "svgJoke" height="220" width="400">
                         <polygon points="60 13,110 48,92 110,30 110,13 48" 
                             stroke="#8374D1"
                             fill="white" stroke-width="5" />
                     </svg>
+                        <script>
+                        document.getElementById('svgJoke').addEventListener('click', () => {
+                            // When SVG is clicked, fetch a joke from the backend
+                            fetch('/api/joke')
+                                .then(response => response.json())
+                                .then(data => {
+                                    // Display the joke on the page
+                                    alert(data.joke)
+                                })
+                                .catch(error => console.error('Error fetching joke:', error));
+                        });
+                        </script>
                 </div>
             </div>
         </div>

@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const joke = require('tell-me-a-joke');
+
 
 // JSON body parsing using built-in middleware
 app.use(express.json());
@@ -13,6 +15,11 @@ app.get('/api/data', (req, res) => {
     res.json({ message: 'Good Job!' });
 });
 
+app.get('/api/joke', (_req, res) => {
+    joke.getRandomDadJoke((dadJoke) => {
+        res.json({ joke: dadJoke });
+    });
+});
 
 // Default route for handling other requests and serving the frontend
 app.use((_req, res) => {

@@ -90,6 +90,18 @@ function login() {
       const year = currentDate.getFullYear();
       return`${month}-${day}-${year}`;
    }
+
+//    document.getElementById('svgJoke').addEventListener('click', () => {
+//     // When SVG is clicked, fetch a joke from the backend
+//     fetch('/api/joke')
+//         .then(response => response.json())
+//         .then(data => {
+//             // Display the joke on the page
+//             alert(data.joke)
+//         })
+//         .catch(error => console.error('Error fetching joke:', error));
+// });
+
   // function checkValidWords(wordArray){
   //   var mydata = JSON.parse(dictionary.json);
   //     // const response = await fetch('dictionary.json');
