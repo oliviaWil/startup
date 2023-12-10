@@ -49,4 +49,11 @@ I am going to use the required technologies in the following ways.
 -JavaScript support for future database data
 -JavaScript support for future login
 
+### Service Deliverable
+- Create an HTTP service using Node.js and Express- done
+- Frontend served up using express static middleware- done
+- Your frontend calls third party service endpoints-use json
+- Your backend provides service endpoints- done
+- Your frontend calls your service endpoints-calls dad joke
+
 
