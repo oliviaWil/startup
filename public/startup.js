@@ -1,5 +1,5 @@
 
-function login() {
+  function login() {
     const nameEl = document.querySelector("#name");
     localStorage.setItem("userName", nameEl.value);
     window.location.href = "index.html";
@@ -10,7 +10,12 @@ function login() {
   function parse() {
     // alert("test")
     const wordsEl = document.querySelector("#words");
+    console.log(wordsEl);
+    console.log("made it to startup.js");
+
     const wordArray = wordsEl.value.split("-");
+    saveSolution(wordArray.join(","));
+    // addSolution(wordArray)
     // console.log(wordArray)
     isValid(wordArray)
     alert("you entered " + wordArray.join(","))
@@ -69,6 +74,7 @@ function login() {
     return true; // All words meet the rule
   }
   function addSolution(wordArray){
+    
     console.log("made it to line 70")
       let table = document.getElementById("myTable");
       let row = table.insertRow(-1); // We are adding at the end
@@ -90,6 +96,28 @@ function login() {
       const year = currentDate.getFullYear();
       return`${month}-${day}-${year}`;
    }
+
+   async function saveSolution(solution) {
+    // const userName = this.getPlayerName();
+    const date = new Date().toLocaleDateString();
+    const newSolution = {solution: solution, date: date};
+
+    try {
+      const response = await fetch('/api/solutions', {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(newSolution),
+      });
+
+      // Store what the service gave us as the high scores
+      const scores = await response.json();
+      localStorage.setItem('solutions', JSON.stringify(solution));
+    } catch {
+      // If there was an error then just track scores locally
+      alert("there was an error")
+    }
+  }
+  
 
 //    document.getElementById('svgJoke').addEventListener('click', () => {
 //     // When SVG is clicked, fetch a joke from the backend
