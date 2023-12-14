@@ -56,4 +56,9 @@ I am going to use the required technologies in the following ways.
 - Your backend provides service endpoints- done
 - Your frontend calls your service endpoints-calls dad joke
 
+### Database Deliverable
+- MongoDB Atlas Database created - done!
+- Provides backend endpoints for manipulating application data - done!
+- Stores application data in MongoDB- yep! solutions are stored there
+
 
