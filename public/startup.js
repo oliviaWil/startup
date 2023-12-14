@@ -14,8 +14,8 @@
     console.log("made it to startup.js");
 
     const wordArray = wordsEl.value.split("-");
-    saveSolution(wordArray.join(","));
-    // addSolution(wordArray)
+    saveSolution(wordArray);
+    addSolution(wordArray)
     // console.log(wordArray)
     isValid(wordArray)
     alert("you entered " + wordArray.join(","))
