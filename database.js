@@ -29,6 +29,7 @@ function getUser(email) {
   }
   
   async function createUser(email, password) {
+    // console.log("here is the data: " + email + password)
     // Hash the password before we insert it into the database
     const passwordHash = await bcrypt.hash(password, 10);
   
@@ -49,4 +50,4 @@ async function addSolution(solution) {
     return result;
   }
 
-  module.exports = {addSolution};
+  module.exports = {addSolution, getUser, getUserByToken, createUser,};

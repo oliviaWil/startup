@@ -1,3 +1,4 @@
+const { userInfo } = require("os");
 
   function login() {
     const nameEl = document.querySelector("#name");
@@ -5,6 +6,34 @@
     window.location.href = "index.html";
     alert('Hello ' + nameEl.value + '!');
     console.log("this works")
+  }
+
+  window.onload = function checkLogin(){
+    if(localStorage.userName){
+      const loggedIn = document.getElementById("login")
+      loggedIn.textContent = "Logged In"
+    }
+  };
+
+  async function loginUser() {
+    loginOrCreate(`/api/auth/login`);
+  }
+  
+  async function createUser() {
+    console.log("made it to startup.js line 15")
+    loginOrCreate(`/api/auth/create`);
+  }
+  
+  async function loginOrCreate(endpoint) {
+    const userName = document.querySelector('#name')?.value;
+    const password = document.querySelector('#password')?.value;
+    const response = await fetch(endpoint, {
+      method: 'post',
+      body: JSON.stringify({ email: userName, password: password }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
   }
   
   function parse() {
