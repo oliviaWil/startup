@@ -61,4 +61,10 @@ I am going to use the required technologies in the following ways.
 - Provides backend endpoints for manipulating application data - done!
 - Stores application data in MongoDB- yep! solutions are stored there
 
+### Login Deliverable
+- Supports new user registration-Yep!
+- Supports existing user authentication-Yep!
+- Stores and retrieves credentials in MongoDB- Yep!
+- Restricts application functionality based upon authentication- Yep! shoule say logged in when logged in
+
 
