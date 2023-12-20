@@ -247,103 +247,97 @@ Port 22 is reserved for SSH (Secure Shell) for secure remote access.
 
 
 # Final Study Guide 
-Ports
-Q: What ports are used for HTTP, HTTPS, SSH?
+## Ports
+**Q: What ports are used for HTTP, HTTPS, SSH?**
+- **HTTP:** Port 80
+- **HTTPS:** Port 443
+- **SSH:** Port 22
 
-HTTP: Port 80
-HTTPS: Port 443
-SSH: Port 22
-HTTP Status Codes
-Q: What do HTTP status codes in the 300, 400, 500 range indicate?
+## HTTP Status Codes
+**Q: What do HTTP status codes in the 300, 400, 500 range indicate?**
+- **300 Range:** Redirection
+- **400 Range:** Client errors
+- **500 Range:** Server errors
 
-300 Range: Redirection
-400 Range: Client errors
-500 Range: Server errors
-HTTP Header Content-Type
-Q: What does the HTTP header content-type allow you to do?
+## HTTP Header Content-Type
+**Q: What does the HTTP header content-type allow you to do?**
+- Specifies the media type of the resource. It allows you to indicate the type of data you are sending or receiving (e.g., JSON, XML, HTML).
 
-Specifies the media type of the resource. It allows you to indicate the type of data you are sending or receiving (e.g., JSON, XML, HTML).
-Cookie Attributes
-Q: What do the following attributes of a cookie do?
+## Cookie Attributes
+**Q: What do the following attributes of a cookie do?**
+- **Domain:** Specifies the domain for which the cookie is valid.
+- **Path:** Defines the path for which the cookie is valid.
+- **SameSite:** Controls when cookies are sent with cross-origin requests.
+- **HTTPOnly:** Restricts the cookie from being accessed through JavaScript.
 
-Domain: Specifies the domain for which the cookie is valid.
-Path: Defines the path for which the cookie is valid.
-SameSite: Controls when cookies are sent with cross-origin requests.
-HTTPOnly: Restricts the cookie from being accessed through JavaScript.
-Express Middleware
-Q: Assuming the following Express middleware, what would be the console.log output for an HTTP GET request with a URL path of /foo/bar?
+## Express Middleware
+**Q: Assuming the following Express middleware, what would be the console.log output for an HTTP GET request with a URL path of /foo/bar?**
+- The `console.log` output would be "Middleware for /foo" for an HTTP GET request with a URL path of `/foo/bar`.
 
-The console.log output would be "Middleware for /foo" for an HTTP GET request with a URL path of /foo/bar.
-Express Service Code (JavaScript Fetch)
-Q: Given the following Express service code: What does the following JavaScript fetch return?
+## Express Service Code (JavaScript Fetch)
+**Q: Given the following Express service code: What does the following JavaScript fetch return?**
+- The JavaScript fetch returns a Promise that resolves to the Response to that request, whether it is successful or not.
 
-The JavaScript fetch returns a Promise that resolves to the Response to that request, whether it is successful or not.
-MongoDB Query
-Q: Given the following MongoDB query, select all of the matching documents.
+## MongoDB Query
+**Q: Given the following MongoDB query, select all of the matching documents.**
+- It selects all documents where the cost is greater than 10 and the name matches the regular expression `/fran.*/`.
 
-It selects all documents where the cost is greater than 10 and the name matches the regular expression /fran.*/.
-User Password Storage
-Q: How should you store user passwords in a database?
+## User Password Storage
+**Q: How should you store user passwords in a database?**
+- Passwords should be securely hashed and salted before storing them in a database.
 
-Passwords should be securely hashed and salted before storing them in a database.
-Websockets in Node.js
-Q: Assuming the following Node.js service code is executing with websockets, what will be logged to the console of the web browser?
+## Websockets in Node.js
+**Q: Assuming the following Node.js service code is executing with websockets, what will be logged to the console of the web browser?**
+- The logged output to the console of the web browser depends on the specific code executed. Websockets typically log connection and message events.
 
-The logged output to the console of the web browser depends on the specific code executed. Websockets typically log connection and message events.
-WebSocket Protocol
-Q: What is the WebSocket protocol used for?
+## WebSocket Protocol
+**Q: What is the WebSocket protocol used for?**
+- WebSocket is a communication protocol that provides full-duplex communication channels over a single, long-lived connection.
 
-WebSocket is a communication protocol that provides full-duplex communication channels over a single, long-lived connection.
-JSX and Curly Braces
-Q: What is JSX, and how are the curly braces rendered?
+## JSX and Curly Braces
+**Q: What is JSX, and how are the curly braces rendered?**
+- JSX is a syntax extension for JavaScript, often used with React. Curly braces `{}` in JSX are used for embedding expressions or JavaScript code.
 
-JSX is a syntax extension for JavaScript, often used with React. Curly braces {} in JSX are used for embedding expressions or JavaScript code.
-React Component (Welcome and App)
-Q: Assuming a HTML document with a <div id="root"></div> element, what content will the following React component generate?
+## React Component (Welcome and App)
+**Q: Assuming a HTML document with a <div id="root"></div> element, what content will the following React component generate?**
+- The React component generates a list of welcome messages for different names within a parent component.
 
-The React component generates a list of welcome messages for different names within a parent component.
-React Component (Numbers)
-Q: Assuming a HTML document with a <div id="root"></div> element, what content will the following React component generate?
+## React Component (Numbers)
+**Q: Assuming a HTML document with a <div id="root"></div> element, what content will the following React component generate?**
+- The React component generates an unordered list (`<ul>`) containing list items (`<li>`) with numbers from 1 to 5.
 
-The React component generates an unordered list (<ul>) containing list items (<li>) with numbers from 1 to 5.
-React Component (Example using State and Hooks)
-Q: What does the following React component do?
+## React Component (Example using State and Hooks)
+**Q: What does the following React component do?**
+- The React component is a simple counter that displays the number of times a button is clicked. It utilizes the `useState` hook for state management.
 
-The React component is a simple counter that displays the number of times a button is clicked. It utilizes the useState hook for state management.
-React Hooks
-Q: What are React Hooks used for?
+## React Hooks
+**Q: What are React Hooks used for?**
+- React Hooks are used for adding state and lifecycle features to functional components in React.
 
-React Hooks are used for adding state and lifecycle features to functional components in React.
-useEffect Hook
-Q: What is the useEffect hook used for?
+## useEffect Hook
+**Q: What is the useEffect hook used for?**
+- The `useEffect` hook is used for side effects in functional components, such as fetching data, subscribing to services, or manually changing the DOM.
 
-The useEffect hook is used for side effects in functional components, such as fetching data, subscribing to services, or manually changing the DOM.
-React Router (BrowserRouter and Routes)
-Q: What does this code do?
+## React Router (BrowserRouter and Routes)
+**Q: What does this code do?**
+- The code sets up routing using React Router with multiple routes for different paths and components.
 
-The code sets up routing using React Router with multiple routes for different paths and components.
-npm in Web Development
-Q: What role does npm play in web development?
+## npm in Web Development
+**Q: What role does npm play in web development?**
+- npm (Node Package Manager) is used in web development for managing and installing packages, dependencies, and scripts.
 
-npm (Node Package Manager) is used in web development for managing and installing packages, dependencies, and scripts.
-package.json in npm Project
-Q: What does package.json do in an npm project?
+## package.json in npm Project
+**Q: What does package.json do in an npm project?**
+- The `package.json` file in an npm project contains metadata about the project and lists its dependencies, scripts, and other configuration details.
 
-The package.json file in an npm project contains metadata about the project and lists its dependencies, scripts, and other configuration details.
-fetch Function
-Q: What does the fetch function do?
+## fetch Function
+**Q: What does the fetch function do?**
+- The `fetch` function is used to make HTTP requests and returns a Promise that resolves to the Response to that request.
 
-The fetch function is used to make HTTP requests and returns a Promise that resolves to the Response to that request.
-Node.js
-Q: What does node.js do?
+## Node.js
+**Q: What does node.js do?**
+- Node.js is a JavaScript runtime environment that allows running JavaScript code server-side.
 
-Node.js is a JavaScript runtime environment that allows running JavaScript code server-side.
-Vite
-Q: What does Vite do?
-
-Vite is a build tool for modern web development that focuses on fast development and optimized production builds.
-
-
-
-
-
+## Vite
+**Q: What does Vite do?**
+- Vite is a build tool for modern web development that focuses on fast development and optimized production builds.
